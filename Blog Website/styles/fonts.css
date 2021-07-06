@@ -1,0 +1,22 @@
+ /*font-family:armstrong*/
+  
+@font-face{
+    font-family: armstrong;
+    src:url('../fonts/Sacramento/Sacramento-Regular.ttf');
+}
+
+ /*font-family:love*/
+ @font-face{
+    font-family: love;
+    src:url('../fonts/Jim_Nightshade/JimNightshade-Regular.ttf');
+}
+/*font-family:elite*/
+@font-face{
+    font-family:elite;
+    src:url('../fonts/Special_Elite/SpecialElite-Regular.ttf');
+}
+/*font-family:crushed*/
+@font-face{
+    font-family:crushed;
+    src:url('../fonts/Crushed/Crushed-Regular.ttf');
+}
