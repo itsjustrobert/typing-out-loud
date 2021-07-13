@@ -2,39 +2,65 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../styles/all.css">
     <title>Symposium/Portfolio</title>
   </head>
   <body>
     <!------------------------------------!NAVIGATION!----------------------------------->
     <nav>
-      <div class="nav-menu">
+      <div class="nav-menu flex-row">
         <div class="nav-brand">
-          <a href="../index.html">Symposium</a>
+          <div class="nav-link">
+            <a href="../index.html">Symposium</a>
+          </div>
         </div>
-      </div>
+        
+        <div class="toggle-collapse">
+    <div class="toggle-icons">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+     
       <div class="nav-items">
         <ul class="items">
           <li class="item">
-            <a href="#"></a>Home
-          </li>
-          <li class="item">Portfolio
-            <a href="#"></a>
-          <li class="item">
-            <a href="#"></a>Blog
+           <div class="nav-link"> 
+             <a href="../index.html">Home</a>
+            </div>
           </li>
           <li class="item">
-            <a href="#"></a>Archives
+            <div class="nav-link">
+              <a href="#">Portfolio</a>
+            </div>
+          <li class="item">
+            <div class="nav-link">
+              <a href="#">Blog</a>
+            </div>
           </li>
           <li class="item">
-            <a href="#"></a>Contact Us
+            <div class="nav-link">
+              <a href="#">Archives</a>
+            </div>
+          </li>
+          <li class="item">
+            <div class="nav-link">
+              <a href="#">Contact Us</a>
+            </div>
           </li>
         </ul>
-      </div>
+      </div> 
+      <div class="social text-gray">
+        <a href="https://github.com/itsjustrobert"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/Robert_Codes"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/its_justrobert/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/robert-armstrong-codes/"><i class="fab fa-linkedin"></i></a>
+    </div>
+    </div>
     </nav>
     <!-------------------x----------------!NAVIGATION!----------------------x------------>
 
     <!-------------------------------MAIN CONTENT----------------------------------------->
-    <div class="about-me">
+    <main><div class="about-me">
       <div class="about-me-name">
         <h1>Robert Armstrong: Developer;</h1>
         
@@ -74,5 +100,13 @@
         </ul>
       </div>
     </section>
+  </main>
+
+
+
+
+
+    <script src="../JS/jqueryv3.6.0.min.js"></script>
+<script src="./JS/main.js"></script>
   </body>
 </html>
