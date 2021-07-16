@@ -1,3 +1,10 @@
+
+/* fonts
+'Poiret One', cursive;   headings and titles
+'Exo', sans-serif;           paragraphs
+'Merienda', cursive; links 
+
+*/
 /* global */
 *{
     padding: 0;
@@ -10,4 +17,64 @@ ul{
 }
 a{
     text-decoration: none;
+font-family: 'Merienda', cursive;
 }
+h1{
+    font-size:40px;
+    font-family: 'Poiret One', cursive;
+}
+p{
+    font-family: 'Exo', sans-serif;
+    font-size:15px;
+}
+
+
+
+
+
+
+.brand{
+    display:flex; 
+    background-color:beige;
+    }
+    .brand .topics li {
+        display:inline-flex;
+        flex-wrap:wrap;
+        padding:4rem;
+        margin:.5rem;
+        justify-content:space-evenly;}
+       
+
+    .title-container{
+align-items: center;
+     
+    margin: 3rem 5rem;
+      
+        text-align:center;
+        font-family:'Poiret One', cursive;
+        font-size:40px;
+       
+    }
+    .right-sidebar{
+        float:right;
+        width:20%;
+        margin-right:20px
+    }
+ 
+
+    .left-sidebar{
+        margin-left:20px;
+        
+        width:20%;
+        
+    }
+   .main-content{
+       display: flex;
+       justify-content: space-between;
+       
+       
+   }
+ main{
+       background-color:beige;
+ }
+ 
