@@ -9,40 +9,85 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    
+    
 }
 
-ul{
+ul{color:white;
     list-style: none;
+   box-sizing: border-box;
+  
    
 }
-a{
+.logo{
+    
+  height: 100%;
+  border-radius:115px
+
+
+
+}
+
+
+a{color:white;
     text-decoration: none;
 font-family: 'Merienda', cursive;
 }
 h1{
     font-size:40px;
     font-family: 'Poiret One', cursive;
+    text-align: center;
+    color:gold;
 }
 p{
     font-family: 'Exo', sans-serif;
-    font-size:15px;
+    font-size:20px;
+    text-align: center;
+    background: #FFFFFF;
+background: -webkit-linear-gradient(to right, #FFFFFF 0%, #9999CF 100%);
+background: -moz-linear-gradient(to right, #FFFFFF 0%, #9999CF 100%);
+background: linear-gradient(to right, #FFFFFF 0%, #9999CF 100%);
+  -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+   border:.5px solid black;
+   animation: 3s;
 }
+h2{
+    font-family:'Exo', sans-serif; 
+    font-size:24px;
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(to right, #FFFFFF 0%, #9999CF 100%);
+    background: -moz-linear-gradient(to right, #FFFFFF 0%, #9999CF 100%);
+    background: linear-gradient(to right, #FFFFFF 0%, #9999CF 100%);
+      -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+        text-align:center;
+    
+}
+    
+/*--------------x---- global--x------ */
 
-
-
+#title{
+    font-size:100px!important;
+}
 
 
 
 .brand{
     display:flex; 
     background-color:beige;
+   margin-right:5%;
     }
     .brand .topics li {
         display:inline-flex;
         flex-wrap:wrap;
         padding:4rem;
         margin:.5rem;
-        justify-content:space-evenly;}
+        justify-content:space-evenly;
+       
+    }
        
 
     .title-container{
@@ -77,4 +122,17 @@ align-items: center;
  main{
        background-color:beige;
  }
+ 
+ .article1{
+     margin-top:250px;
+     padding:50;
+ }
+
+ .articles{
+margin-top:120px;
+
+ }
+ 
+ 
+
  
