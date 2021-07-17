@@ -132,6 +132,11 @@ align-items: center;
 margin-top:120px;
 
  }
+ .me{
+  padding: 3rem 3rem 0 5rem;
+    image-orientation: unset;
+ }
+ 
  
  
 
