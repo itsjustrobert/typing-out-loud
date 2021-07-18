@@ -1,10 +1,10 @@
 var character = document.getElementById("character");
 var game= document.getElementById("game");
 var interval;
-
-
 var both = 0;
 var counter = 0;
+var currentBlocks =[];
+
 function moveLeft(){
     var left =
     parseInt(window.getComputedStyle(character).getPropertyValue("left"));
@@ -46,22 +46,37 @@ setInterval(function(){
     var holeLast = document.getElementById("hole" +(counter -1));
     if(counter>0){
     var blockLastTop = 
-    parseInt(window.getComputedStyle(blockLast).getPropertyValue("left"));
+    parseInt(window.getComputedStyle(blockLast).getPropertyValue("top"));
     var holeLastTop =
-    parseInt(window.getComputedStyle(holeLast).getPropertyValue("left"));}
-
+    parseInt(window.getComputedStyle(holeLast).getPropertyValue("top"));}
+        if(blockLastTop<400 || counter==0){
     var block = document.createElement("div");
     var hole = document.createElement("div");
     block.setAttribute("class","block");
     hole.setAttribute("class","hole");
-    block.setAttribute("id","block" +counter);
-    hole.setAttribute("id","hole"+counter);
+    block.setAttribute("id","block" + counter);
+    hole.setAttribute("id","hole"+ counter);
+    block.style.top= blockLastTop + 100 + "px";
+    hole.style.top= holeLastTop + 100 + "px";
     var random = Math.floor(Math.random() * 360);
     hole.style.left = random + "px";
     game.appendChild(block);
     game.appendChild(hole);
+    currentBlocks.push(counter);
     counter++;
-
-
-    },400)
+        }
+        for(var i = 0; i < currentBlocks.length; i++){
+            let current = currentBlocks[i];
+            let iBlock= document.getElementById("block"+current);
+            let iHole= document.getElementById("hole"+current);
+            let iBlockTop=parseFloat(window.getComputedStyle(iBlock).getPropertyValue("top"));
+            iBlock.style.top = iBlockTop - 0.5 + "px";
+            iHole.style.top = iBlockTop - 0.5 + "px";
+            if(iBlockTop < -20){
+                currentBlocks.shift();
+                iBlock.remove();
+                iHole.remove();
+            }
+        }
+    },1)
 
