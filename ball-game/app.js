@@ -41,7 +41,7 @@ document.addEventListener("keyup", event => {
     both=0;
 });
 
-setInterval(function(){
+var blocks = setInterval(function(){
     var blockLast = document.getElementById("block" +(counter -1));
     var holeLast = document.getElementById("hole" +(counter -1));
     if(counter>0){
@@ -65,10 +65,21 @@ setInterval(function(){
     currentBlocks.push(counter);
     counter++;
         }
+        var characterTop=
+        parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        var characterLeft=
+        parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+        var drop=0;
+        if(characterTop <=0){
+            alert("GAMEOVER . SCORE:"+(counter-9));
+            clearInterval(blocks);
+            location.reload();
+        }
         for(var i = 0; i < currentBlocks.length; i++){
             let current = currentBlocks[i];
             let iBlock= document.getElementById("block"+current);
             let iHole= document.getElementById("hole"+current);
+            let iHoleLeft = parseFloat(window.getComputedStyle(iHole).getPropertyValue("left"));
             let iBlockTop=parseFloat(window.getComputedStyle(iBlock).getPropertyValue("top"));
             iBlock.style.top = iBlockTop - 0.5 + "px";
             iHole.style.top = iBlockTop - 0.5 + "px";
@@ -76,6 +87,18 @@ setInterval(function(){
                 currentBlocks.shift();
                 iBlock.remove();
                 iHole.remove();
+            }
+            if(iBlockTop -20 < characterTop && iBlockTop>characterTop){
+                drop++;
+                if(iHoleLeft<=characterLeft && iHoleLeft+20>=characterLeft){
+                    drop=0;
+                }
+            }
+            if(drop==0){
+                if(characterTop<480){
+                character.style.top=characterTop + 2 + "px";}
+            }else{
+                character.style.top = characterTop - 0.5 +"px";
             }
         }
     },1)
